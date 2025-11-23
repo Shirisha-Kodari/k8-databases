@@ -10,10 +10,10 @@ metadata:
 data:
   REDIS_HOST: "redis"
   CATALOGUE_HOST: "catalogue"
-  CATALOGUE_PORT: "8080"
+  CATALOGUE_PORT: "8080" 
 ---
 apiVersion: apps/v1
-kind: Deployment
+kind: Deployment 
 metadata: 
   name: cart
   namespace: roboshop
@@ -71,7 +71,6 @@ spec:
     port: 8080 # service port
     targetPort: 8080 # container port
 ---
-
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
