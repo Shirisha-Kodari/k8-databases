@@ -80,7 +80,7 @@ spec:
     apiVersion: apps/v1 
     kind: Deployment
     name: catalogue 
-  minReplicas: 1
+  minReplicas: 1  
   maxReplicas: 10
   metrics:
   - type: Resource
@@ -88,4 +88,10 @@ spec:
       name: cpu
       target:
         type: Utilization
-        averageUtilization: 10
+        averageUtilization: 10  #10% if pod reached 10 then create pod 
+
+
+#50 / 500 × 100 = 10% 
+# ceil(1 × 50 / 10)
+# = ceil(5)
+# = 5

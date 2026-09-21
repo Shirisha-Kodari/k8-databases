@@ -66,7 +66,7 @@ spec:
       project: roboshop
       tier: database # has to match .spec.template.metadata.labels
   serviceName: "mysql-headless" # this should be headless service
-  replicas: 3 # by default is 1
+  replicas: 2 # by default is 1
   template:
     metadata:
       labels:
@@ -76,7 +76,7 @@ spec:
     spec:
       containers:
       - name: mysql
-        image: shirisha104/mysql:v1
+        image: shirisha104/mysql:v2
         envFrom:
         - secretRef:
             name: mysql
