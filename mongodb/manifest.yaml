@@ -4,7 +4,7 @@ kind: Service
 metadata:
   name: mongodb-headless 
   namespace: roboshop  
-  labels:
+  labels: 
     component: mongodb
     project: roboshop
     tier: database
